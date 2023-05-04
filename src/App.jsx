@@ -1,23 +1,30 @@
-import Trabalhos from "./components/Trabalhos";
-import Divisao from "./components/Divisao";
-import Faq from "./components/Faq";
-import Hero from "./components/Hero";
-import Promessas from "./components/Promessas";
-import Bio from "./components/Bio";
-import Footer from "./components/Footer";
+import Home from './pages/Home';
+import Bio from './pages/Bio';
+import Error from './pages/Error'
+
+import { createBrowserRouter, RouterProvider} from 'react-router-dom'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>
+  },
+  {
+    path: "/bio",
+    element: <Bio/>
+  },
+  {
+    path: '*',
+    element: <Error/>
+  }
+])
 
 function App() {
   return (
     <>
-      <Hero />
-      <main>
-        <Divisao />
-        <Promessas />
-        <Bio />
-        <Trabalhos />
-        <Faq />
-      </main>
-      <Footer />
+      <RouterProvider
+        router={router}
+      />
     </>
   );
 }
