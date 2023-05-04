@@ -1,0 +1,64 @@
+.promessas{
+  width: 100%;
+  background: linear-gradient(45deg, #323232, var(--preto) 80%,);
+  background-size: 400% 100%;
+  animation: degrade-promessas 6s infinite alternate-reverse;
+  align-items: center;
+  
+  .content{
+    gap: 50px;
+    
+    h2{
+      max-width: 370px;
+    }
+    
+    .cards{
+      max-width: 340px;
+      width: 100%;
+      align-items: center;
+    }
+
+  }
+}
+
+
+@keyframes degrade-promessas {
+  0%{
+    background-position-x: 0%;
+  }
+  100%{
+    background-position-x: 100%;
+  }
+}
+
+@media (max-width: 770px){
+  .promessas{
+    .content{
+      flex-direction: column;
+      align-items: center;
+      
+      h2{
+        max-width: 70%;
+        text-align: center;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 545px){
+  .promessas{
+    
+    .content{
+      h2{
+        font-size: 20px;
+        max-width: 100%;
+      }
+      
+      .cards{
+        max-width: 280px;
+      }
+  
+    }
+  }
+}

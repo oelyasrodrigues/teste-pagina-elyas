@@ -1,0 +1,73 @@
+.bio{
+  min-height: 550px;
+  background-image: url("../../assets/bio/bgBioDesktop.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  
+  .content{
+    height: 100%;
+    align-items: center;
+    
+    .espaco-img{
+      width: 38%;
+    }
+    .text{
+      max-width: 390px;
+      .underline{
+        text-decoration: underline;
+      }
+      span{
+        font-weight: 600;
+      }
+      h2{
+        font-size: 24px;
+        margin-bottom: 14px;
+      }
+      p{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 770px){
+  .bio{
+    background-image: url("../../assets/bio/bgBioMobile.jpg");
+    
+    .content{
+      
+      .espaco-img{
+        display: none;
+      }
+      .text{
+        margin-top: 70%;
+        text-align: center;
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 545px){
+  .bio{
+    .content{
+
+      .text{
+        h2{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 340px){
+  .bio{
+    .content{
+      .text{
+        margin-top: 80%;
+      }
+    }
+  }
+}

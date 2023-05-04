@@ -1,0 +1,39 @@
+.divisao{
+  background: linear-gradient(45deg, var(--preto), var(--vermelho), var(--vermelho));
+  background-size: 400% 100%;
+  animation: degrade 8s infinite alternate;
+  transition: .4s;
+  overflow: hidden;
+
+  h2{
+    white-space: nowrap;
+    padding: 10px;
+    margin-left: -40px;
+    animation: divisao 12s infinite linear;
+  }
+}
+@keyframes degrade {
+  0%{
+    background-position-x: 0%;
+  }
+  100%{
+    background-position-x: 100%;
+  }
+}
+
+@keyframes divisao {
+  0%{
+    transform: translateX(-500px);
+  }
+  100%{
+    transform: translateX(-100px);
+  }
+}
+
+@media (max-width: 410px){
+  .divisao{
+    h2{
+      font-size: 18px;
+    }
+  }
+}
